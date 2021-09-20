@@ -1,10 +1,10 @@
 {
   "name": "builtformik",
-  "version": "1.0.4",
-  "main": "index.js",
+  "version": "1.0.0",
+  "main": "./src/index.js",
   "type": "module",
   "author": "CheoR",
-  "homepage": "https://github.com/CheoR/tmp-formik-pratice#readme",
+  "homepage": "/",
   "description": "temporary formik practice",
   "license": "MIT",
   "repository": {
@@ -12,18 +12,38 @@
     "url": "git+https://github.com/CheoR/tmp-formik-pratice"
   },
   "dependencies": {
+    "@testing-library/jest-dom": "^5.11.4",
+    "@testing-library/react": "^11.1.0",
+    "@testing-library/user-event": "^12.1.10",
     "formik": "^2.2.9",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "react-scripts": "4.0.3",
+    "web-vitals": "^1.0.1",
     "yup": "^0.32.9"
   },
-  "devDependencies": {
-    "react": "^17.0.2",
-    "react-dom": "^17.0.2"
-  },
-  "peerDependencies": {
-    "react": "^17.0.2",
-    "react-dom": "^17.0.2"
-  },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
   }
 }

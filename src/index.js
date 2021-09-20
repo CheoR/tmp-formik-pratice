@@ -1,5 +1,5 @@
 import React from "react";
-// import ReactDOM from "react-dom";
+import ReactDOM from "react-dom";
 
 import { Formik, Form, useField } from 'formik';
 // import { useFormik } from "formik";
@@ -106,8 +106,8 @@ const FormSelect = ({ label, ...props }) => {
 };
 
 
-// const LoanForm = (props) => {
-export default function LoanForm(props) {
+const LoanForm = (props) => {
+// export default function LoanForm(props) {
 
   return (
     <section className="container">
@@ -264,9 +264,9 @@ export default function LoanForm(props) {
 //   );
 // };
 
-// function App() {
-//   return <LoanForm />;
-// }
+function App() {
+  return <LoanForm />;
+}
 
-// const rootElement = document.getElementById("root");
-// ReactDOM.render(<App />, rootElement);
+const rootElement = document.getElementById("root");
+ReactDOM.render(<App />, rootElement);
