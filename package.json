@@ -1,7 +1,16 @@
 {
-  "name": "built_formik",
-  "version": "0.1.0",
-  "private": true,
+  "name": "builtformik",
+  "version": "1.0.0",
+  "main": "./src/index.js",
+  "type": "module",
+  "author": "CheoR",
+  "homepage": "https://github.com/CheoR/tmp-formik-pratice#readme",
+  "description": "temporary formik practice",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CheoR/tmp-formik-pratice"
+  },
   "dependencies": {
     "@testing-library/jest-dom": "^5.11.4",
     "@testing-library/react": "^11.1.0",

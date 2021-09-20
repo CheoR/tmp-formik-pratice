@@ -1,5 +1,5 @@
 import React from "react";
-import ReactDOM from "react-dom";
+// import ReactDOM from "react-dom";
 
 import { Formik, Form, useField } from 'formik';
 // import { useFormik } from "formik";
@@ -106,9 +106,10 @@ const FormSelect = ({ label, ...props }) => {
 };
 
 
-const LoanForm = ({ props }) => {
+export default function LoanForm(props) {
+// const LoanForm = (props) => {
   return (
-    <>
+    <section className="container">
       <h1>Loan Application</h1>
       <Formik
         initialValues={{
@@ -129,14 +130,14 @@ const LoanForm = ({ props }) => {
         //   }, 400);
         // }}
         onSubmit={(values, { setSubmitting }) => {
-          const { redirectToOnSuccess } = props
+          const { redirectToOnSuccess, url } = props
           console.log(values)
           setSubmitting(false);
-          redirectToOnSuccess()
+          redirectToOnSuccess.push(url)
         }}
       >
 
-        <Form>
+        <Form className="form">
           <FormTextInput
             label="First Name"
             name="firstName"
@@ -158,8 +159,8 @@ const LoanForm = ({ props }) => {
             placeholder="bob@builder.com"
           />
 
-          <FormSelect label="Job Type" name="loanType">
-            <option value="">Select a job type</option>
+          <FormSelect label="Loan Type" name="loanType">
+            <option value="">Select a loan type</option>
             <option value="builder">Builder</option>
             <option value="owner">Owner</option>
             <option value="renovation">Renovation</option>
@@ -173,7 +174,7 @@ const LoanForm = ({ props }) => {
           <button type="submit">Submit</button>
         </Form>
       </Formik>
-    </>
+    </section>
   );
 };
 
@@ -262,9 +263,9 @@ const LoanForm = ({ props }) => {
 //   );
 // };
 
-function App() {
-  return <LoanForm />;
-}
+// function App() {
+//   return <LoanForm />;
+// }
 
-const rootElement = document.getElementById("root");
-ReactDOM.render(<App />, rootElement);
+// const rootElement = document.getElementById("root");
+// ReactDOM.render(<App />, rootElement);
