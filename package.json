@@ -1,7 +1,7 @@
 {
   "name": "builtformik",
   "version": "1.0.0",
-  "main": "./src/index.js",
+  "main": "index.js",
   "type": "module",
   "author": "CheoR",
   "homepage": "https://github.com/CheoR/tmp-formik-pratice#readme",
