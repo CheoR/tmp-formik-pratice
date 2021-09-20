@@ -1,6 +1,6 @@
 {
   "name": "builtformik",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "main": "index.js",
   "type": "module",
   "author": "CheoR",
@@ -12,16 +12,16 @@
     "url": "git+https://github.com/CheoR/tmp-formik-pratice"
   },
   "dependencies": {
-    "@babel/preset-react": "^7.12.13",
-    "@testing-library/jest-dom": "^5.11.4",
-    "@testing-library/react": "^11.1.0",
-    "@testing-library/user-event": "^12.1.10",
     "formik": "^2.2.9",
-    "react": "^17.0.2",
-    "react-dom": "^17.0.2",
-    "react-scripts": "4.0.3",
-    "web-vitals": "^1.0.1",
     "yup": "^0.32.9"
+  },
+  "devDependencies": {
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2"
+  },
+  "peerDependencies": {
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"

@@ -2,7 +2,9 @@
 
 Practice using Formik and creating npm packages.
 
-# Intall
+Nothinging to see here.
+
+# Install
 
 ```code
 npm i builtformik
