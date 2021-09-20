@@ -1,33 +1,55 @@
 import React from "react";
 import ReactDOM from "react-dom";
+
 import { useFormik } from "formik";
+
+import * as Yup from 'yup';
+
 import "./styles.css";
 
-const validate = values => {
-  const errors = {};
-  if (!values.firstName) {
-    errors.firstName = 'Required';
-  } else if (values.firstName.length > 15) {
-    errors.firstName = 'Must be 15 characters or less';
-  } else if (values.firstName.length < 2) {
-    errors.firstName = 'Must be 2 characters or more';
-  }
+// const validate = values => {
+//   const errors = {};
+//   if (!values.firstName) {
+//     errors.firstName = 'Required';
+//   } else if (values.firstName.length > 15) {
+//     errors.firstName = 'Must be 15 characters or less';
+//   } else if (values.firstName.length < 2) {
+//     errors.firstName = 'Must be 2 characters or more';
+//   }
 
-  if (!values.lastName) {
-    errors.lastName = 'Required';
-  } else if (values.lastName.length > 20) {
-    errors.lastName = 'Must be 20 characters or less';
-  } else if (values.lastName.length < 2) {
-    errors.lastName = 'Must be 2 characters or more';
-  }
+//   if (!values.lastName) {
+//     errors.lastName = 'Required';
+//   } else if (values.lastName.length > 20) {
+//     errors.lastName = 'Must be 20 characters or less';
+//   } else if (values.lastName.length < 2) {
+//     errors.lastName = 'Must be 2 characters or more';
+//   }
 
-  if (!values.email) {
-    errors.email = 'Required';
-  } else if (!/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i.test(values.email)) {
-    errors.email = 'Invalid email address: email@address.com';
-  }
-  return errors;
-};
+//   if (!values.email) {
+//     errors.email = 'Required';
+//   } else if (!/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i.test(values.email)) {
+//     errors.email = 'Invalid email address: email@address.com';
+//   }
+//   return errors;
+// };
+
+const fieldsSchema = Yup.object({
+
+  firstName: Yup.string()
+    .max(15, 'Must be 15 characters or less')
+    .min(2, 'Must be 2 characters or more')
+    .required('Required'),
+
+  lastName: Yup.string()
+    .max(20, 'Must be 20 characters or less')
+    .min(2, 'Must be 2 characters or more')
+    .required('Required'),
+
+  email: Yup.string()
+    .email('Invalid email address: email@address.com')
+    .required('Required'),
+
+});
 
 const LoanForm = () => {
   const formik = useFormik({
@@ -36,7 +58,7 @@ const LoanForm = () => {
       lastName: "",
       email: ""
     },
-    validate,
+    validationSchema: fieldsSchema,
     onSubmit: values => {
       alert(JSON.stringify(values, null, 2));
     }
