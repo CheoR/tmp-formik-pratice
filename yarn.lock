@@ -1091,7 +1091,7 @@
     "@babel/types" "^7.4.4"
     "esutils" "^2.0.2"
 
-"@babel/preset-react@^7.12.5":
+"@babel/preset-react@^7.12.13", "@babel/preset-react@^7.12.5":
   "integrity" "sha512-TYM0V9z6Abb6dj1K7i5NrEhA13oS5ujUYQYDfqIBXYHOc2c2VkFgc+q9kyssIyUfy4/hEwqrgSlJ/Qgv8zJLsA=="
   "resolved" "https://registry.yarnpkg.com/@babel/preset-react/-/preset-react-7.12.13.tgz"
   "version" "7.12.13"
@@ -3048,21 +3048,6 @@
     "base64-js" "^1.0.2"
     "ieee754" "^1.1.4"
     "isarray" "^1.0.0"
-
-"builtformik@^1.0.1":
-  "integrity" "sha512-j2AMwMP2kH3Krb2G8HUoQSnprSzupgg1HtOiost/WYdS/KRjpPcH0s5KevA+kzXAe43jULT+zF4FVj4Wr7veyQ=="
-  "resolved" "https://registry.npmjs.org/builtformik/-/builtformik-1.0.1.tgz"
-  "version" "1.0.1"
-  dependencies:
-    "@testing-library/jest-dom" "^5.11.4"
-    "@testing-library/react" "^11.1.0"
-    "@testing-library/user-event" "^12.1.10"
-    "formik" "^2.2.9"
-    "react" "^17.0.2"
-    "react-dom" "^17.0.2"
-    "react-scripts" "4.0.3"
-    "web-vitals" "^1.0.1"
-    "yup" "^0.32.9"
 
 "builtin-modules@^3.1.0":
   "integrity" "sha512-lGzLKcioL90C7wMczpkY0n/oART3MbBa8R9OFGE1rJxoVI86u4WAGfEk8Wjv10eKSyTHVGkSo3bvBylCEtk7LA=="

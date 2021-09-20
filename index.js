@@ -106,8 +106,9 @@ const FormSelect = ({ label, ...props }) => {
 };
 
 
-export default function LoanForm(props) {
 // const LoanForm = (props) => {
+export default function LoanForm(props) {
+
   return (
     <section className="container">
       <h1>Loan Application</h1>
